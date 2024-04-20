@@ -26,7 +26,7 @@ int shm_id;
 void* writer(void* arg) {
     int index = rand() % MAX_SIZE;
     int old_value = data[index];
-    int new_value = rand() % 100;
+    int new_value = rand() % 1000;
 
     sem_wait(mutex);
     data[index] = new_value;
